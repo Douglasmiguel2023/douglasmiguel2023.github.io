@@ -170,6 +170,20 @@ em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--a2));-webki
 /* ===== cursor glow leve ===== */
 #cglow{position:fixed;left:0;top:0;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;pointer-events:none;z-index:2;background:radial-gradient(circle,rgba(217,70,239,.17),rgba(139,43,226,.07) 45%,transparent 70%);filter:blur(8px);opacity:0;transition:opacity .6s}
 @media(pointer:coarse){#cglow{display:none}}
+/* ===== feedback out/2026: CTAs em contraste, retrato no hero, carrossel menor, ícones ===== */
+.wa{background:linear-gradient(90deg,#BCF429,#d6ff57);color:#0b0b0c;box-shadow:0 10px 40px -10px rgba(188,244,41,.55)}
+.wa:hover,.wa:active{box-shadow:0 0 0 5px rgba(188,244,41,.18),0 14px 50px -4px rgba(188,244,41,.8)}
+.btn{background:linear-gradient(90deg,#BCF429,#d6ff57);color:#0b0b0c;box-shadow:0 10px 40px -10px rgba(188,244,41,.55)}
+.btn i{background:#0b0b0c;color:#BCF429}
+.hphoto{margin:26px auto 0;width:136px;height:136px;border-radius:50%;padding:4px;background:linear-gradient(135deg,#BCF429,rgba(188,244,41,0) 60%);box-shadow:0 0 0 6px rgba(188,244,41,.12),0 20px 50px -12px rgba(188,244,41,.45)}
+.hphoto img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.gwrap{height:430px}
+.gcard{width:min(272px,72vw)}
+@media(max-width:700px){.gwrap{height:380px}}
+.hzc .hzic{display:block}
+.hzc .hzic svg{width:38px;height:38px;color:#BCF429}
+.midcta{text-align:center;padding:8px 0 4px}
+.midcta .wa{font-size:15px;padding:15px 28px}
 </style></head><body>
 <canvas id="bgp" aria-hidden="true"></canvas><div class="cdot" id="cd"></div><div class="cring" id="cr"></div><div id="cglow" aria-hidden="true"></div>
 <div class="pre" id="pre"><div><img data-i="logo" alt="DS"></div></div>
@@ -178,31 +192,34 @@ em{font-style:normal;background:linear-gradient(90deg,var(--a),var(--a2));-webki
 <section class="hero"><div class="grid"></div><div class="hbg" id="hbg"><i></i></div>
 <div class="hc" id="hc"><span class="eb">Logotipos, landing pages e ensaios com IA</span>
 <h1>Design que faz a sua marca ser <em>lembrada</em></h1>
-<p>Identidade visual, páginas que vendem, fotos com IA e link personalizado para a sua bio.</p>
+<p>Identidade visual, páginas que vendem, fotos com IA e link personalizado para a sua bio.</p> <div class="hphoto"><img data-i="jacket" alt="Douglas, fundador da DSENG DESIGNER"></div>
 <div class="row"><a class="btn" href="#form">Quero meu projeto<i>→</i></a>
-<div class="pf"><span><img data-i="hero" alt=""><img data-i="jacket" alt=""></span><div>+<b data-n="150">0</b> projetos<br>entregues</div></div></div>
+<div class="pf"><span><img data-i="hero" alt=""></span><div>+<b data-n="150">0</b> projetos<br>entregues</div></div></div>
 <div class="row acts" style="margin-top:16px"><a class="wa" data-wa>Faça seu orçamento</a><a class="ig" data-ig>Instagram</a></div></div>
 </section>
 <div class="over">
 <section class="strip"><div class="scl" id="scl"><div class="trk" id="trk"></div></div></section>
 <section class="fs" id="form"><div class="w"><div class="card">
-<div><h2 class="rv">Peça<br><em>seu projeto</em><br>agora</h2><img class="jk" data-i="jacket" alt="Ensaio fotográfico feito com IA"></div>
+<div><h2 class="rv">Peça<br><em>seu projeto</em><br>agora</h2><img class="jk" data-i="hero" alt="Ensaio fotográfico feito com IA"></div>
 <div class="fm"><p>Responda em 1 minuto e suas respostas seguem <b>direto para o meu WhatsApp.</b></p>
 <div class="sh"><span id="st">Passo 1</span><span>Orçamento</span></div><div class="bar"><i id="br"></i></div><div id="fm"></div></div></div></div></section>
 <section class="sec"><div class="w"><span class="eb">Resultados</span><h2 class="rv" style="margin-top:16px">Trabalho entregue,<br><em>marcas no ar.</em></h2><p>Projetos que saíram do papel e já estão trabalhando pelos clientes.</p>
 <div class="bds" id="bds"></div><div class="cn" id="cn"></div></div></section>
 <div class="rb"><div class="rbn"><div class="rt" id="r1"></div></div><div class="rbn"><div class="rt" id="r2"></div></div></div>
+<section class="sec" style="padding-bottom:52px"><div class="w"><span class="eb">Portfólio</span><h2 class="rv" style="margin-top:16px">Logos que já<br><em>saíram do papel</em></h2></div>
+<div class="gwrap"><div class="gtrack" id="gtrack"></div></div><div class="gbar"><button id="gpv" aria-label="Anterior">←</button><button id="gplay" aria-label="Pausar ou reproduzir">❚❚</button><div class="ginfo"><b id="gname"></b><span id="gcount"></span></div><button id="glike" aria-label="Curtir">♥</button><button id="gnx" aria-label="Próximo">→</button></div></section> <div class="midcta"><a class="wa" data-wa>Quero minha logo</a></div>
 <section class="sec"><div class="w"><span class="eb">Serviços</span><h2 class="rv" style="margin-top:16px">Tudo para a sua marca<br><em>aparecer bem.</em></h2><div class="sv" id="sv"></div></div></section>
 <section class="hz" id="hz"><div class="w"><span class="eb rv">Diferenciais</span><h2 class="rv" style="margin-top:16px">Por que <em>trabalhar comigo</em></h2></div><div class="hzt" id="hzt"></div></section>
-<section class="sec" style="padding-bottom:52px"><div class="w"><span class="eb">Portfólio</span><h2 class="rv" style="margin-top:16px">Logos que já<br><em>saíram do papel</em></h2></div>
-<div class="gwrap"><div class="gtrack" id="gtrack"></div></div><div class="gbar"><button id="gpv" aria-label="Anterior">←</button><button id="gplay" aria-label="Pausar ou reproduzir">❚❚</button><div class="ginfo"><b id="gname"></b><span id="gcount"></span></div><button id="glike" aria-label="Curtir">♥</button><button id="gnx" aria-label="Próximo">→</button></div></section>
+
 </div>
 <section class="mt" id="mt"><div class="w"><span class="eb">Meu processo</span><h2 class="rv" style="margin-top:16px">Do briefing<br>à <em>entrega final</em></h2></div>
 <div class="rail" id="rail"><div class="ln"><i id="ln"></i></div></div><div class="dots" id="dots"></div></section>
+<div class="midcta"><a class="wa" data-wa>Fazer meu orçamento</a></div>
+<section class="sec"><div class="w"><span class="eb">Quem sou eu</span><h2 class="rv" style="margin-top:16px">Prazer, eu sou o <em>Douglas</em></h2><p class="mut" style="max-width:640px;margin:18px auto 0;line-height:1.7">Sou o designer por trás da DSENG. Crio logotipos, landing pages e ensaios com IA para lojas e negócios de todos os nichos — mais de 150 marcas já passaram por aqui. Meu trabalho é direto: identidade exclusiva, feita do zero, com entrega rápida e revisões até você aprovar.</p></div></section>
 <section class="sec over" style="border-radius:0;box-shadow:none;border:0"><div class="w"><span class="eb">FAQ</span><h2 class="rv" style="margin-top:16px">Perguntas <em>frequentes</em></h2><div class="fq" id="fq"></div></div></section>
 <footer class="ft"><div class="w"><img class="big" data-i="logo" alt="DS"><h2 class="rv">Vamos tirar sua ideia<br>do papel?</h2><p class="mut" style="margin:12px 0 26px">Fale comigo e comece hoje.</p><div class="row acts"><a class="wa" data-wa>Faça seu orçamento</a><a class="ig" data-ig>Instagram</a></div><small>© DS. Todos os direitos reservados.</small></div></footer>
 </main>
-<div class="fl" id="fl"><a class="wa" data-wa>Faça seu orçamento</a><div class="pf"><span><img data-i="hero" alt=""><img data-i="jacket" alt=""></span>+150 projetos</div></div>
+<div class="fl" id="fl"><a class="wa" data-wa>Faça seu orçamento</a><div class="pf"><span><img data-i="hero" alt=""></span>+150 projetos</div></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
@@ -230,7 +247,8 @@ const RM=false;/* efeitos sempre ativos em todos os aparelhos (pedido do dono) *
 document.documentElement.classList.add('js');document.documentElement.style.setProperty('--bg-img',`url(${I.bg})`);document.documentElement.style.setProperty('--hero-img',`url(${I.glow})`);
 const L2=(h,n)=>Array(n).fill(h).join('');
 $('#trk').innerHTML=L2(C.words.map(w=>`<span>${w}</span><img data-i="logo" alt="">`).join(''),4);
-$('#hzt').innerHTML=C.dif.map((d,i)=>`<div class="hzc sp"><span>0${i+1}</span><h4>${d}</h4></div>`).join('');
+const HZIC=['<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.5 0-3-.4-4.2-1.1L3 20l1.2-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg>','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>','<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>'];
+$('#hzt').innerHTML=C.dif.map((d,i)=>`<div class="hzc sp"><span class="hzic">${HZIC[i]}</span><h4>${d}</h4></div>`).join('');
 $('#bds').innerHTML=C.badges.map(b=>`<div class="bd rv"><b>${b[0]}</b><span>${b[1]}</span></div>`).join('');
 $('#cn').innerHTML=C.stats.map(s=>`<div class="rv"><b data-n="${s[0]}" data-s="${s[1]}">0</b><span>${s[2]}</span></div>`).join('');
 const sq='<div class="sq">'+C.ribbon.map(w=>`<span>${w}</span><i>✦</i>`).join('')+'</div>';
